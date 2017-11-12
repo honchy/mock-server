@@ -1,5 +1,4 @@
 
-
 var express = require('express')
 var bodyParser = require('body-parser')
 var fs = require('fs')
@@ -7,6 +6,8 @@ var http = require('http')
 
 var app = express()
 var httpServer = http.createServer(app);
+
+app.use(express.static('./'));
 
 app.use(bodyParser.json())
 
